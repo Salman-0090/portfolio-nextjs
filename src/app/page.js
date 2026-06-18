@@ -1,11 +1,12 @@
 import Hero from "./_components/Hero";
-import Navigation from "./_components/Navigation";
+import Projects from "./_components/Projects";
 
 
 export default function Home() {
   return (
-   <div className="px-10 bg-indigo-50">
+   <div className="px-20 bg-indigo-50">
     <Hero />
+    <Projects />
    </div>
   );
 }

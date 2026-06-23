@@ -4,39 +4,37 @@ import Button from "./Button"
 
 export default function Projects() {
     const cards = [
-    {
-      name: "The Wild Oasis | Cabin Booking App",
-      techs: ["React.js", "Next.js 14", "Tailwind CSS", "Supabase"],
-      image: "/wildoasis.webP",
-      description:
-        "A full-stack hotel management application built with Next.js 14. This comprehensive system handles cabin bookings, guest management, and administrative operations with a modern, responsive interface.",
-      liveLink: "https://wild-oasis-nextjs-app-uzro.vercel.app/",
-      codeLink: "https://github.com/Salman-0090/Wild-oasis-Nextjs-app",
-    },
+   
   {
       name: "Finance Tracker",
-      techs: ["React.js", "Next.js 14", "Tailwind CSS", "Supabase"],
-      image: "/wildoasis.webP",
+      techs: ["Next.js 14", "Tailwind CSS", "Supabase", "NextAuth", "Recharts"],
+      image: "/Finance tracker.jpeg",
       description:
-        "A full-stack hotel management application built with Next.js 14. This comprehensive system handles cabin bookings, guest management, and administrative operations with a modern, responsive interface.",
-      liveLink: "https://wild-oasis-nextjs-app-uzro.vercel.app/",
-      codeLink: "https://github.com/Salman-0090/Wild-oasis-Nextjs-app",
+        "A full-stack finance tracker with CRUD operations, category/date filtering, and visual analytics dashboards — built with Next.js, Supabase, and NextAuth.",
+      liveLink: "https://finance-tracker-smoky-alpha-83.vercel.app/",
+      codeLink: "https://github.com/Salman-0090/Finance-Tracker",
     },
 {
       name: "Pizza Booking App",
-      techs: ["React.js", "Next.js 14", "Tailwind CSS", "Supabase"],
-      image: "/wildoasis.webP",
+      techs: ["React.js", "Tailwind CSS", "Supabase"],
+      image: "/pizza.jpeg",
       description:
-        "A full-stack hotel management application built with Next.js 14. This comprehensive system handles cabin bookings, guest management, and administrative operations with a modern, responsive interface.",
-      liveLink: "https://wild-oasis-nextjs-app-uzro.vercel.app/",
-      codeLink: "https://github.com/Salman-0090/Wild-oasis-Nextjs-app",
+        "A React + Redux pizza ordering app with cart management and order tracking, migrated from a REST API to a Supabase backend for persistent, relational data storage.",
+      liveLink: "https://react-pizza-app-v148.vercel.app/",
+      codeLink: "https://github.com/Salman-0090/react-pizza-app",
     },]
     return(
-    <section id="projects" className="mt-40 mb-20 ">
-        <div className="flex gap-8 flex-wrap justify-center">
+    <section id="projects" className="mt-50">
+       <h2 className="text-3xl font-bold text-center mb-5 text-blue-600">
+    Projects
+  </h2>
+        <div className="flex gap-8 flex-wrap justify-center mt-20">
           {cards.map((card)=> {
+            
             return (
-            <div key={card.name} className="max-w-[300px] max-h-[700px] rounded-md overflow-hidden bg-blue-100 shadow-xl/30 cursor-pointer transition-all duration-300 hover:translate-y-2 hover:shadow-2xl">
+            
+            <div key={card.name} className="max-w-[300px] max-h-[800px] rounded-md overflow-hidden bg-blue-100 shadow-xl/30 cursor-pointer transition-all duration-300 hover:translate-y-2 hover:shadow-2xl pb-6">
+                  
                  <Image src={card.image} width={400} height={400} alt={card.name} key={card.name}/>
               
                 <div className="flex flex-wrap gap-2 mt-3 px-3">
@@ -47,11 +45,13 @@ export default function Projects() {
                 <div className="mt-10 ml-4 text-lg font-semibold"> 
                     {card.name}
                 </div>
-                <div className="text-sm ml-4 mr-4 mt-4"> 
+                <div className="text-sm ml-4 mr-4 mt-4 text-stone-700"> 
                     {card.description}
                 </div>
-                <Button variant="primary" className="ml-3">View Project</Button>
-                <Button variant="stone" className="ml-3 mb-10">Source Code</Button>
+                <div className="mt-auto flex gap-3 pt-4 flex-wrap"> 
+                <Button variant="primary" className="ml-3"><a target="blank" href={card.liveLink}>View Project</a></Button>
+                <Button variant="stone" className="ml-3"><a target="blank" href={card.codeLink}>Source Code</a></Button>
+                </div>
             </div>
                 )
           })}

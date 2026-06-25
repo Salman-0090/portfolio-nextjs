@@ -11,7 +11,7 @@ export default function Hero() {
                <span>Frontend Developer</span>
             </h1>
             <p className="mt-10 text-stone-500">
-                <span className="sm:block">Frontend developer crafting fast, intuitive, .
+                <span className="sm:block">Frontend developer crafting fast, intuitive, 
 
 </span>
         <span>and good-looking web apps — self-taught, self-driven</span>
